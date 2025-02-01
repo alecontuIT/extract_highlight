@@ -16,7 +16,7 @@ def main():
         output_txt_path = pdf_path.replace(".pdf", ".txt")  # Genera il nome del file di output
 
         text_extractor = TextExctactor(pdf_path)
-        text_extractor.pdf_to_text(pdf_path, output_txt_path)
+        text_extractor.pdf_to_text(output_txt_path)
         
         with open(output_txt_path, "r", encoding="utf-8") as f:
             st.download_button("Download Txt File of highlighted text", f, file_name=output_txt_path)  # Pulsante per scaricare il file
