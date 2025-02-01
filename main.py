@@ -5,7 +5,8 @@ def main():
     """
     Interfaccia Streamlit per caricare un PDF e scaricare il Markdown generato.
     """
-    st.title("PDF to Markdown Converter")
+    st.title("PDF to Txt Converter")
+    st.subheader("Upload a PDF file and download the highlighted text as a txt file")
     uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
     
     if uploaded_file is not None:
