@@ -27,7 +27,7 @@ class TextExctactor:
         Converte il testo evidenziato in un file di testo.
         """
         highlighted_text = self.extract_highlighted_text()
-        
+        highlighted_text = "\n".join(highlighted_text)
         with open(output_txt_path, "w", encoding="utf-8") as txt_file:
             txt_file.write(highlighted_text)
         
