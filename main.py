@@ -9,7 +9,7 @@ def main():
     uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
     
     if uploaded_file is not None:
-        pdf_path = f"temp_{uploaded_file.name}"  # Salva il file temporaneamente
+        pdf_path = f"{uploaded_file.name}"  # Salva il file temporaneamente
         with open(pdf_path, "wb") as f:
             f.write(uploaded_file.getbuffer())
         
